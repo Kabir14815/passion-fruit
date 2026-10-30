@@ -29,26 +29,9 @@ const NAV = [
   { href: pageHref("contact/"), id: "contact", label: "Contact" }
 ];
 
-let logoCount = 0;
 function logoMarkup() {
-  logoCount += 1;
-  const id = `mark${logoCount}`;
-  return `
-<svg viewBox="0 0 64 64" aria-hidden="true">
-  <defs>
-    <radialGradient id="${id}" cx="36%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#ffe0b0"/>
-      <stop offset="42%" stop-color="#ff6a32"/>
-      <stop offset="100%" stop-color="#8d1c16"/>
-    </radialGradient>
-  </defs>
-  <circle cx="32" cy="32" r="30" fill="#2a0c10" stroke="rgba(232,196,141,.45)"/>
-  <circle cx="32" cy="32" r="21" fill="url(#${id})"/>
-  <ellipse cx="26" cy="27" rx="1.5" ry="2.5" fill="#3b120c" transform="rotate(-20 26 27)"/>
-  <ellipse cx="34" cy="25" rx="1.4" ry="2.3" fill="#3b120c" transform="rotate(16 34 25)"/>
-  <ellipse cx="30" cy="34" rx="1.5" ry="2.4" fill="#3b120c"/>
-  <ellipse cx="37" cy="33" rx="1.3" ry="2.1" fill="#3b120c" transform="rotate(8 37 33)"/>
-</svg>`;
+  const logoSrc = new URL("assets/uploads/2016/04/logo-pfp-1.png", ROOT).href;
+  return `<img class="brand-logo" src="${logoSrc}" alt="" width="42" height="42">`;
 }
 
 function pageId() {

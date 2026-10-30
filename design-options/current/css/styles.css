@@ -94,7 +94,7 @@ button { cursor: pointer; }
   gap: 0.75rem;
   min-width: 190px;
 }
-.brand svg { width: 42px; height: 42px; flex: none; }
+.brand svg, .brand-logo { width: 42px; height: 42px; flex: none; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,.06); }
 .brand-name {
   display: flex;
   flex-direction: column;
@@ -577,6 +577,7 @@ h3 { margin: 0 0 0.55rem; font-size: 1.65rem; line-height: 1.18; font-weight: 56
   align-items: center;
 }
 .member-btn .mono { width: 52px; height: 52px; animation: none; }
+.member-btn .member-photo { width: 52px; height: 52px; }
 .member-btn small { display: block; color: var(--mute); }
 .chev {
   width: 10px;
@@ -690,6 +691,33 @@ input:focus, textarea:focus, select:focus { border-color: var(--gold); }
 
 .press-list { grid-template-columns: 1fr; }
 .press-item { display: grid; grid-template-columns: 180px 1fr auto; gap: 1rem; align-items: center; }
+.press-thumb, .award-media, .member-photo, .person-photo {
+  display: block; width: 100%; border-radius: 16px; object-fit: cover;
+  background: rgba(255,255,255,.04); border: 1px solid var(--line);
+}
+.press-thumb { width: 180px; height: 112px; }
+.award-media { max-width: 420px; margin: 1rem 0; height: auto; }
+.member-photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: none; }
+.person-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex: none; }
+.logo-wall {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.85rem; margin: 1.5rem 0 2rem;
+}
+.logo-wall img {
+  width: 100%; height: 64px; object-fit: contain; padding: 0.65rem 0.75rem;
+  background: rgba(255,255,255,.92); border-radius: 14px; border: 1px solid var(--line);
+}
+.asset-strip {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.85rem; margin: 1.2rem 0 1.8rem;
+}
+.asset-strip img {
+  width: 100%; height: 120px; object-fit: cover; border-radius: 16px; border: 1px solid var(--line);
+}
+.demo-thumb {
+  width: 100%; height: 140px; object-fit: cover; border-radius: 14px; margin-bottom: 0.85rem;
+  border: 1px solid var(--line);
+}
 .blog-grid { grid-template-columns: repeat(2, 1fr); }
 .feature {
   padding: 1.5rem 0 0.4rem;
