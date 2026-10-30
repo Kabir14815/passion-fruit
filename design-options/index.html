@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passion Fruit — Homepage options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#2a1510; --coral:#ff6238; --cream:#f8f1e8; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      font-family: Figtree, system-ui, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #3a1a14, transparent),
+                  radial-gradient(900px 500px at 90% 0%, #4a2218, transparent),
+                  #140608;
+      color: var(--cream);
+      padding: 48px 24px 80px;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    h1 { font-family: Fraunces, serif; font-weight: 600; font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 12px; }
+    .lede { max-width: 54ch; opacity: .82; line-height: 1.6; margin: 0 0 40px; }
+    .note {
+      display: inline-block; padding: 8px 14px; border-radius: 999px;
+      background: rgba(255,98,56,.15); color: #ff9468; font-size: 13px; font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;
+    }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+    a.card {
+      display: block; text-decoration: none; color: inherit;
+      border-radius: 22px; padding: 28px; overflow: hidden; position: relative;
+      border: 1px solid rgba(255,255,255,.08);
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    a.card:hover { transform: translateY(-4px); border-color: rgba(255,98,56,.45); }
+    a.card .tag { font-size: 12px; font-weight: 700; letter-spacing: .04em; margin-bottom: 10px; }
+    a.card h2 { font-family: Fraunces, serif; font-size: 1.55rem; margin: 0 0 8px; color: #fff; }
+    a.card p { margin: 0; font-size: 14px; line-height: 1.5; opacity: .78; }
+    a.card .go { margin-top: 18px; font-size: 13px; font-weight: 700; color: #ff8a5c; }
+    .current { background: linear-gradient(145deg, #3a1018, #140608); border-color: rgba(255,98,56,.35); grid-column: 1 / -1; }
+    .current .tag { color: #ff9468; }
+    .a { background: linear-gradient(145deg, #5a2a1c, #2a120e); }
+    .a .tag { color: #ff9468; }
+    .b { background: linear-gradient(145deg, #1f3d28, #142016); }
+    .b .tag { color: #ffe566; }
+    .c { background: linear-gradient(145deg, #1e3544, #121c24); }
+    .c .tag { color: #7eb8d8; }
+    .d { background: linear-gradient(145deg, #4a3210, #241808); }
+    .d .tag { color: #f0b429; }
+    .e { background: linear-gradient(145deg, #0e2a28, #070b12); }
+    .e .tag { color: #3dffe8; }
+    .e .go { color: #3dffe8; }
+    .f { background: linear-gradient(145deg, #5a2a40, #2a1830); }
+    .f .tag { color: #ff8a9a; }
+    .f .go { color: #ff8a9a; }
+    .g { background: linear-gradient(145deg, #3a2848, #1c1428); }
+    .g .tag { color: #ffb0a0; }
+    .g .go { color: #ffb0a0; }
+    footer { margin-top: 48px; font-size: 13px; opacity: .55; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="note">Client review · open each option full-page</div>
+    <h1>Passion Fruit Voiceovers — homepage options</h1>
+    <p class="lede">Start with the current dark redesign, then compare friendly and modern directions. Pick one (or mix) and we’ll build it on the live site.</p>
+    <div class="grid">
+      <a class="card current" href="current/">
+        <div class="tag">OPTION 1 · CURRENT SITE</div>
+        <h2>Dark Wine (current redesign)</h2>
+        <p>The existing Passion Fruit redesign — wine background, coral, Fraunces/Figtree, globe, waveform, full multi-page site.</p>
+        <div class="go">Open current website →</div>
+      </a>
+      <a class="card a" href="a-soft-sunrise.html">
+        <div class="tag">OPTION 2 · SOFT SUNRISE</div>
+        <h2>Soft Sunrise</h2>
+        <p>Warm peach light, coral accents, globe + waveform, approachable Atlanta studio.</p>
+        <div class="go">Open full homepage →</div>
+      </a>
+      <a class="card b" href="b-fresh-pulp.html">
+        <div class="tag">OPTION 3 · FRESH PULP</div>
+        <h2>Fresh Pulp</h2>
+        <p>Citrus passion-fruit energy, leaf green, playful fruit graphics and bright demos.</p>
+        <div class="go">Open full homepage →</div>
+      </a>
+      <a class="card c" href="c-clear-day.html">
+        <div class="tag">OPTION 4 · CLEAR DAY</div>
+        <h2>Clear Day</h2>
+        <p>Airy soft blue, calm trust, clean waveform and centered friendly hero.</p>
+        <div class="go">Open full homepage →</div>
+      </a>
+      <a class="card d" href="d-golden-welcome.html">
+        <div class="tag">OPTION 5 · GOLDEN WELCOME</div>
+        <h2>Golden Welcome</h2>
+        <p>Honey-gold glow, inviting living-room studio feel, warm human voice.</p>
+        <div class="go">Open full homepage →</div>
+      </a>
+      <a class="card e" href="e-signal-night.html">
+        <div class="tag">OPTION 6 · SIGNAL NIGHT</div>
+        <h2>Signal Night</h2>
+        <p>Dark broadcast console — cyan signal, VU meters, tape reels, mono type.</p>
+        <div class="go">Open full homepage →</div>
+      </a>
+      <a class="card f" href="f-soft-bento.html">
+        <div class="tag">OPTION 7 · SOFT BENTO</div>
+        <h2>Soft Bento</h2>
+        <p>Airy white app feel — pill nav, bento tiles, soft shadows, mint/lilac accents.</p>
+        <div class="go">Open full homepage →</div>
+      </a>
+      <a class="card g" href="g-soft-air.html">
+        <div class="tag">OPTION 8 · SOFT AIR</div>
+        <h2>Soft Air</h2>
+        <p>Like Soft Bento, more spacious — roomier type, bigger gaps, calmer two-column hero.</p>
+        <div class="go">Open full homepage →</div>
+      </a>
+    </div>
+    <footer>Design comps for client approval · deployed via Netlify from this folder</footer>
+  </div>
+</body>
+</html>

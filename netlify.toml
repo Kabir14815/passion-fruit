@@ -1,0 +1,7 @@
+[build]
+  publish = "design-options"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
