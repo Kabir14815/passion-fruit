@@ -106,12 +106,20 @@
     }
     .blob-a{width:180px;height:180px;right:-40px;bottom:-40px;background:#ffc4b8;opacity:.55}
     .blob-b{width:110px;height:110px;right:70px;bottom:90px;background:#ffd7a8;opacity:.7}
-    .mic-illu{
-      position:absolute;right:28px;bottom:28px;width:150px;height:150px;
-      border-radius:40px;background:linear-gradient(160deg,#fff,#ffe8e3);
-      border:1px solid var(--line);display:grid;place-items:center;
-      box-shadow:var(--shadow);z-index:1;
+    .liz-float{
+      position:relative;width:100%;height:auto;aspect-ratio:3/2;margin-top:28px;
+      object-fit:cover;object-position:22% 42%;border-radius:28px;
+      box-shadow:var(--shadow);
     }
+    .logo-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .logo-wall img{width:100%;height:68px;object-fit:contain;background:#fff;border-radius:16px;padding:8px 12px;border:1px solid var(--line)}
+    .demo audio{width:100%;height:36px}
+    .team-feature{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center;background:#fff;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:14px}
+    .team-feature img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:22% 42%}
+    .team-feature div{padding:8px 22px 8px 0}
+    .team-feature p{color:var(--muted);margin:8px 0 0}
+    .awards img,.awards video{width:100%;border-radius:14px;margin:10px 0;display:block}
+    .awards video{background:#000}
 
     .stat-tile{background:var(--mint)}
     .stat-tile strong{display:block;font-size:2.4rem;font-weight:800;letter-spacing:-.04em;margin-top:28px}
@@ -229,7 +237,11 @@
       .hero-tile{grid-row:auto;grid-column:auto;min-height:auto}
       .team{grid-template-columns:repeat(3,1fr)}
       .links{display:none}
-      .mic-illu{display:none}
+      .liz-float{height:auto}
+      .team-feature{grid-template-columns:1fr}
+      .team-feature img{width:100%}
+      .team-feature div{padding:0 18px 18px}
+      .logo-wall{grid-template-columns:1fr 1fr}
     }
     @media (prefers-reduced-motion:reduce){.wave i{animation:none}}
   </style>
@@ -249,24 +261,15 @@
     <section class="bento" aria-label="Homepage hero">
       <div class="tile hero-tile">
         <div>
-          <div class="chip"><i></i> Atlanta voice studio · Est. 1996</div>
-          <h1>A friendly voice for a <span>modern</span> world.</h1>
-          <p class="lede">Liz Raphael Helgesen and Passion Fruit make technology feel human — on phones, trains, banking lines, hold messages, and public health alerts.</p>
+          <div class="chip"><i></i> Liz Raphael Helgesen · Est. 1996</div>
+          <h1>Liz. The voice you <span>already</span> know.</h1>
+          <p class="lede">For more than twenty-five years, her voice has been the one on the train, on hold, at the bank, and in the brands people use every day.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#">Hear the demos</a>
-            <a class="btn btn-soft" href="#">Say hello</a>
+            <a class="btn btn-primary" href="#hear">Hear Liz</a>
+            <a class="btn btn-soft" href="#">Book a session</a>
           </div>
         </div>
-        <div class="blob blob-a" aria-hidden="true"></div>
-        <div class="blob blob-b" aria-hidden="true"></div>
-        <div class="mic-illu" aria-hidden="true">
-          <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
-            <rect x="28" y="10" width="16" height="28" rx="8" fill="#ff5b45"/>
-            <path d="M22 34a14 14 0 0 0 28 0" stroke="#ff5b45" stroke-width="3" stroke-linecap="round"/>
-            <path d="M36 48v10M26 58h20" stroke="#1a1d26" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="52" cy="20" r="5" fill="#ffd27a"/>
-          </svg>
-        </div>
+        <img class="liz-float" src="current/assets/uploads/2016/04/LRH-64-350.jpg" alt="Liz Raphael Helgesen recording at the microphone">
       </div>
 
       <div class="tile stat-tile">
@@ -287,7 +290,7 @@
       <div class="tile sun-tile">
         <div class="label">Trusted craft</div>
         <h3>25+ years · Lloyd’s insured</h3>
-        <p>Full studio · Source-Connect · ISDN</p>
+        <p>She records with you on the line, from Atlanta.</p>
       </div>
 
       <div class="tile" style="background:var(--coral-soft);display:flex;flex-direction:column;justify-content:space-between;min-height:180px">
@@ -301,69 +304,73 @@
     </section>
 
     <div class="chips" aria-hidden="true">
-      <span>Commercial VO</span><span>Narration</span><span>Transit</span><span>IVR / TTS</span>
-      <span>e-Learning</span><span>On-hold</span><span>Multilingual</span><span>Translation</span>
-      <span>Audio engineering</span><span>Source-Connect</span>
+      <span>Liz Helgesen</span><span>Commercials</span><span>Narration</span><span>Transit</span>
+      <span>Hold messages</span><span>The brands you know</span><span>English</span><span>Spanish</span><span>French</span>
     </div>
 
     <section class="section">
       <div class="section-head">
         <div>
-          <p class="label">Services</p>
-          <h2>Seasoned pros. Exact specifications.</h2>
-          <p>For over 25 years Passion Fruit Voiceovers has been the go-to voice-over company for the largest brands and high-tech companies.</p>
+          <p class="label">What she does</p>
+          <h2>Built around one voice.</h2>
+          <p>Clients come for Liz. She reads the way a person actually talks, in an Atlanta studio that delivers the file the brand asked for.</p>
         </div>
       </div>
       <div class="grid-3">
         <article class="card">
           <div class="ico" style="background:var(--coral-soft)">✨</div>
-          <h3>Experience</h3>
-          <p>With 25 years in the business, we are all seasoned pros and deliver product exactly the way our clients need it.</p>
-          <div class="meta">Commercial · Narration · e-Learning</div>
+          <h3>Her voice</h3>
+          <p>Warm, clear, and sincere. The read people trust on a commercial, a story, or a message they have to hear.</p>
+          <div class="meta">Commercials · Narration</div>
         </article>
         <article class="card">
-          <div class="ico" style="background:var(--mint)">🎛️</div>
-          <h3>Tech savvy</h3>
-          <p>As a full-service voice over production studio, we record, edit and convert to all industry formats.</p>
-          <div class="meta">IVR · TTS · Source-Connect · ISDN</div>
+          <div class="ico" style="background:var(--mint)">🎙️</div>
+          <h3>The studio</h3>
+          <p>She records with you on the line, takes direction in the session, and sends the read back the way you asked for it.</p>
+          <div class="meta">Live direction · Atlanta</div>
         </article>
         <article class="card">
           <div class="ico" style="background:var(--lilac)">🌍</div>
-          <h3>Versatility</h3>
-          <p>No project we can’t tackle and we always exceed expectations.</p>
-          <div class="meta">On-hold · Multilingual · Translation</div>
+          <h3>The roster</h3>
+          <p>When one voice is not enough, English, Spanish, and French talent are already beside her.</p>
+          <div class="meta">EN · ES · FR</div>
         </article>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="hear">
       <div class="section-head">
         <div>
-          <p class="label">Demos</p>
-          <h2>Press play. Meet the voice.</h2>
+          <p class="label">Hear her</p>
+          <h2>This is Liz.</h2>
         </div>
-        <a class="btn btn-soft" href="#">See all demos</a>
       </div>
       <div class="demo-grid">
-        <article class="demo"><div class="demo-top"><span class="play">▶</span><div class="wave"><i style="height:10px"></i><i style="height:18px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:12px"></i><i style="height:20px"></i></div></div><div><strong>Liz · Commercial</strong><span>U.S. English</span></div></article>
-        <article class="demo"><div class="demo-top"><span class="play">▶</span><div class="wave"><i style="height:16px"></i><i style="height:12px"></i><i style="height:22px"></i><i style="height:14px"></i><i style="height:20px"></i><i style="height:10px"></i></div></div><div><strong>Liz · Narration</strong><span>U.S. English</span></div></article>
-        <article class="demo"><div class="demo-top"><span class="play">▶</span><div class="wave"><i style="height:14px"></i><i style="height:22px"></i><i style="height:10px"></i><i style="height:18px"></i><i style="height:24px"></i><i style="height:12px"></i></div></div><div><strong>MARTA Transit</strong><span>Announcements</span></div></article>
-        <article class="demo"><div class="demo-top"><span class="play">▶</span><div class="wave"><i style="height:18px"></i><i style="height:12px"></i><i style="height:20px"></i><i style="height:16px"></i><i style="height:10px"></i><i style="height:22px"></i></div></div><div><strong>Bill · Promo</strong><span>U.S. Male</span></div></article>
-        <article class="demo"><div class="demo-top"><span class="play">▶</span><div class="wave"><i style="height:12px"></i><i style="height:20px"></i><i style="height:16px"></i><i style="height:24px"></i><i style="height:14px"></i><i style="height:18px"></i></div></div><div><strong>Maria Howell</strong><span>Urban Female</span></div></article>
-        <article class="demo"><div class="demo-top"><span class="play">▶</span><div class="wave"><i style="height:20px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:12px"></i><i style="height:18px"></i><i style="height:16px"></i></div></div><div><strong>Cecilia</strong><span>Español neutro</span></div></article>
+        <article class="demo"><div><strong>Liz · Commercial</strong><span>U.S. English · the voice of the brand</span></div><audio controls preload="none" src="current/assets/uploads/2016/04/Liz_Helgesen_Commercial-1.mp3"></audio></article>
+        <article class="demo"><div><strong>Liz · Narration</strong><span>U.S. English</span></div><audio controls preload="none" src="current/assets/uploads/2016/04/Liz_Helgesen_-Narration.mp3"></audio></article>
+        <article class="demo"><div><strong>MARTA Transit</strong><span>Her announcement, on the train</span></div><audio controls preload="none" src="current/assets/uploads/2016/04/MARTA_final_15_radio_English_052812.wav"></audio></article>
+        <article class="demo"><div><strong>Bill · Promo</strong><span>U.S. English, male</span></div><audio controls preload="none" src="current/assets/uploads/2016/04/Bill-Global-Banking-Demo.mp3"></audio></article>
+        <article class="demo"><div><strong>Maria Howell</strong><span>Urban female</span></div><audio controls preload="none" src="current/assets/uploads/2016/04/Maria-Howell-Urban-050911.mp3"></audio></article>
+        <article class="demo"><div><strong>Cecilia</strong><span>Español neutro</span></div><audio controls preload="none" src="current/assets/uploads/2016/04/Cecilia_Spanish_-IVR7-19-10.mp3"></audio></article>
       </div>
     </section>
 
     <section class="section">
       <div class="section-head">
         <div>
-          <p class="label">Team</p>
-          <h2>The face behind the voice.</h2>
-          <p>Meet the real people behind the voices keeping you connected to your life, your family and your favorite brands.</p>
+          <p class="label">The face of the brand</p>
+          <h2>Liz Raphael Helgesen</h2>
+          <p>Founder, and the voice clients book first. One in four Americans hears her on a typical day.</p>
+        </div>
+      </div>
+      <div class="team-feature">
+        <img src="current/assets/uploads/2016/04/LRH-64-350.jpg" alt="Liz Raphael Helgesen at the microphone">
+        <div>
+          <h3 style="margin:0;font-size:1.4rem">The voice you book first.</h3>
+          <p>Contemporary, warm, and sincere — United States English. Her voice is insured by Lloyd’s of London. The roster below is here when a project needs another sound.</p>
         </div>
       </div>
       <div class="team">
-        <div class="person"><div class="av">LH</div><strong>Liz Helgesen</strong><span>Founder</span></div>
         <div class="person"><div class="av">BI</div><strong>Bill</strong><span>Promo Guy</span></div>
         <div class="person"><div class="av">MH</div><strong>Maria</strong><span>Urban Female</span></div>
         <div class="person"><div class="av">CE</div><strong>Cecilia</strong><span>Español</span></div>
@@ -375,15 +382,19 @@
     <section class="section">
       <div class="section-head">
         <div>
-          <p class="label">Clientele</p>
-          <h2>Diverse and global success.</h2>
+          <p class="label">The brands</p>
+          <h2>Voices they already trust with Liz.</h2>
         </div>
       </div>
-      <div class="clients">
-        <div class="client"><h3>Transit</h3><p>MARTA · London Transit · BART</p></div>
-        <div class="client"><h3>Tech &amp; IVR</h3><p>Cisco · Avaya · Verizon</p></div>
-        <div class="client"><h3>Finance</h3><p>SunTrust · Equifax</p></div>
-        <div class="client"><h3>Health</h3><p>CDC · public health alerts</p></div>
+      <div class="logo-wall">
+        <img src="current/assets/uploads/2016/04/logo-marta-trans-mono.png" alt="MARTA">
+        <img src="current/assets/uploads/2016/04/logo-Coca-Cola-trans-mono.png" alt="Coca-Cola">
+        <img src="current/assets/uploads/2016/04/logo-att-trans-mono-1.png" alt="AT&amp;T">
+        <img src="current/assets/uploads/2016/04/logo-TMobile-mono-1.png" alt="T-Mobile">
+        <img src="current/assets/uploads/2016/04/logo-ibm-mono.png" alt="IBM">
+        <img src="current/assets/uploads/2016/04/logo-bmw-mono.png" alt="BMW">
+        <img src="current/assets/uploads/2016/04/logo-CDC-trans-mono.png" alt="CDC">
+        <img src="current/assets/uploads/2016/04/logo-london_transit-mono.png" alt="London Transit">
       </div>
     </section>
 
@@ -400,10 +411,11 @@
         </div>
         <aside class="awards">
           <p class="label">Awards &amp; press</p>
-          <h2>Recognized for work that keeps people moving.</h2>
+          <h2>They already know her voice.</h2>
+          <img src="current/assets/uploads/2016/04/atlanta_magazine_photo-1.jpg" alt="Atlanta Magazine clipping featuring Liz">
           <p>2017 SOVAS Outstanding Body of Work nominee — Liz Raphael Helgesen</p>
-          <p>AJC · Vanity Fair · Atlanta Magazine · CNN · NPR/WABE</p>
-          <p>Community: Chabad of Cobb · ServiceSpace · KidVisions</p>
+          <img src="current/assets/uploads/2017/09/Plaque-Liz-dual.png" alt="SOVAS plaque for Liz Helgesen" style="background:#fff;padding:8px">
+          <video controls preload="none" src="current/assets/uploads/2021/05/LIZ-ON-CNN.mp4"></video>
         </aside>
       </div>
     </section>
